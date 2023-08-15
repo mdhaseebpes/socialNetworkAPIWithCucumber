@@ -37,7 +37,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/mdhaseebpes/socialNetworkAPIWithCucumber.git'
-                    sh "mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@regression"
+                    sh "mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@regression -Xlint:deprecation"
 
                 }
             }
@@ -81,7 +81,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/mdhaseebpes/socialNetworkAPIWithCucumber.git'
-                    sh "mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@sanity"
+                    sh "mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@sanity -Xlint:deprecation"
 
                 }
             }
