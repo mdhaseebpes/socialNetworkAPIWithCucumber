@@ -13,15 +13,18 @@ Before running the tests, make sure you have the following installed:
 # Getting Started
 
 To get started, clone the repository from GitHub:
-git clone https://github.com/mdhaseebpes/socialNetworkAPIWithCucumber.git
+git clone https://github.com/your-username/api-automation-framework.git
 
 # Running the Tests
 
 To run the smoke tests, use the following command:
-mvn clean test -Dcucumber.filter.tags=@smoke
+mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@smoke
 
 To run the regression tests, use the following command:
-mvn clean test -Dcucumber.filter.tags=@regression
+mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@regression
+
+To run the sanity tests, use the following command:
+mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@sanity
 This will execute the Cucumber test runner and generate the test reports.
 
 # Test Reports
