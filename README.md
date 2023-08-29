@@ -17,7 +17,7 @@ git clone https://github.com/your-username/api-automation-framework.git
 
 # Running the Tests
 
-o run the smoke tests parallel using thread count, use the following command:
+To run the smoke tests parallel using thread count, use the following command:
 mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@smoke -Ddataproviderthreadcount=2
 
 To run the regression tests parallel using thread count, use the following command:
