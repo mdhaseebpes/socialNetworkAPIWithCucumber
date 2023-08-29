@@ -17,14 +17,15 @@ git clone https://github.com/your-username/api-automation-framework.git
 
 # Running the Tests
 
-To run the smoke tests, use the following command:
-mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@smoke
+o run the smoke tests parallel using thread count, use the following command:
+mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@smoke -Ddataproviderthreadcount=2
 
-To run the regression tests, use the following command:
-mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@regression
+To run the regression tests parallel using thread count, use the following command:
+mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@regression -Ddataproviderthreadcount=4
 
-To run the sanity tests, use the following command:
-mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@sanity
+To run the sanity tests parallel using thread count, use the following command:
+mvn clean test -Denv=jsonplaceholder -Dcucumber.filter.tags=@sanity -Ddataproviderthreadcount=2
+
 This will execute the Cucumber test runner and generate the test reports.
 
 # Test Reports
